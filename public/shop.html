@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./shop.css">
+    <script src="https://kit.fontawesome.com/4121ca634c.js" crossorigin="anonymous"></script>
+    <script src="./shop.js" defer></script>
+  </head>
+  <body>
+    <!-- main container for all the inner containers -->
+    <container class="flexContainer">
+      <!-- headers section, top of the site -->
+      <header class="flexContainer">
+        <h1 id="headerLogo">Water & sons</h1>
+        <div id="headerUserContainer">
+          <p id="headerUser">Welcome, "username" <i class="fa-regular fa-user"></i></p>
+          <button id="signOut" onclick="signOut()">sign out</button>
+        </div>
+      </header>
+      <!-- gallery container for the shop, containing all the products from the database -->
+      <gallery class="flexContainer">
+        <div id="galleryHeaderContainer" class="flexContainer">
+          <h2 id="galleryHeaderH2">Browse our collection:</h2>
+          <input type="text" placeholder="search..." id="galleryHeaderSearchInput">
+          <p id="galleryHeaderSortText">Sorting by:</p>
+          <button id="galleryHeaderSortButton" data-sorttype="name">Name</button>
+        </div>
+        <div id="productContainer" class="flexContainer">
+        </div>
+      </gallery>
+      <!-- cart container with the selected products and a sum footer -->
+      <cart class="flexContainer">
+        <div class="flexContainer" id="cartHeader">
+          <h2 id="cartHeaderH2">Your cart </h2>
+          <i id="cartHeaderLogo" class="fa-solid fa-cart-shopping fa-xl"></i>
+        </div>
+        <div class="flexContainer" id="cartProductContainer">
+        </div>
+        <div class="flexContainer" id="cartFooter">
+          <div class="flexContainer cartFooterTextContainer">
+            <p id="footerTotal" class="cartFooterText">Total: 0$</p>
+            <p id="footerShipping" class="cartFooterText">Shipping:  5$</p>
+            <p id="footerOrderTotal" class="cartFooterText">Order total: 5$</p>
+          </div>
+          <button class="toCheckout" onclick="openCheckout()">To Checkout</button>
+        </div>
+      </cart>
+    </container>
+    <!-- popup container for the checkout process -->
+    <div id="checkoutContainer" class="flexContainer">
+      <button id="closeCheckout" onclick="closeCheckout()"><i class="fa-solid fa-x"></i></button>
+      <div id="textContainer" class="flexContainer">
+        <h3 id="checkoutTitle">Checkout</h3>
+        <hr>
+        <p class="checkoutText" id="checkoutTotal"></p>
+        <p class="checkoutText" id="checkoutShipping">Shipping & fees: 5$</p>
+        <p class="checkoutText" id="checkoutOrderTotal"></p>
+      </div>
+      <!-- card details -->
+      <div id="paymentContainer" class="flexContainer">
+        <h3 id="paymentTitle">Payment details</h3>
+        <hr>
+        <div class="formContainer">
+          <input class="paymentInput" type="number" placeholder="card number: XXXX-XXXX-XXXX-XXXX" id="cardNumber">
+          <input class="paymentInput" type="text" placeholder="expiry date: MM/YY" id="expiryDate">
+          <input class="paymentInput" type="number" placeholder="cvv: XXX" id="cvv">
+          <button class="paymentInput" type="button" id="submitPayment" onclick="checkAndSend()">Confirm payment</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

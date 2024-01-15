@@ -1,0 +1,125 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  height: 70px;
+
+  width: 400px;
+
+  border-top: 0.5px solid black;
+
+  border-left: 0.5px solid black;
+
+  border-right: 0.5px solid black;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  margin: auto;
+
+  margin-top: 100px;
+
+  position: relative;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+}
+
+#header-logo {
+  font-size: 30px;
+
+  font-weight: 100;
+
+  color: rgb(117, 117, 117);
+}
+
+main {
+  width: 400px;
+
+  height: 400px;
+
+  margin: 100px auto;
+
+  margin-top: 0px;
+
+  border: 0.5px solid black;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+
+  display: flex;
+
+  flex-flow: column;
+
+  background-color: #fbfbfb;
+}
+
+#inputContainer {
+  display: flex;
+
+  flex-flow: column;
+
+  margin: 30px 25px 25px;
+}
+
+.inputs {
+  margin-top: 30px;
+
+  height: 40px;
+
+  font-size: 15px;
+
+  padding-left: 20px;
+
+  border: 0.5px black solid;
+  border-radius: 5px;
+}
+
+#buttonContainer {
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+
+  justify-content: center;
+
+  position: relative;
+
+  top: 60px;
+}
+
+button {
+  width: 130px;
+
+  margin: auto;
+
+  height: 40px;
+
+  border: 0.5px solid black;
+  border-radius: 5px;
+
+  color: rgb(117, 117, 117);
+
+  background-color: white;
+}
+
+button:hover {
+  background-color: rgb(250, 240, 240);
+}
+
+#errorDiv {
+  position: relative;
+
+  top: 120px;
+
+  display: flex;
+
+  padding: auto;
+
+  justify-content: center;
+
+  color: red;
+}

@@ -1,0 +1,97 @@
+#div1{
+    animation: changeCircle 3s infinite;
+}
+
+@keyframes changeCircle{
+
+    from{
+         width: 100px;
+         height: 100px;
+         background-color: red;
+    }
+    to{
+        width: 50px;
+        height: 50px;
+        background-color: blue;
+        border-radius: 50%;
+    }
+
+}
+
+#div2{
+    animation: changePlace 5s infinite;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    position: relative;
+}
+
+@keyframes changePlace{
+
+    0%{
+        top: 0;
+        left: 0;
+        background-color: green;
+    }
+    25%{
+        left: 200px;
+        top: 0;
+    }
+    50%{
+        top: 200px;
+        left: 200px;
+    }
+    75%{
+        top: 200px;
+        left: 0;
+        
+    }
+    100%{
+        background-color: pink;
+        top:0;
+        left: 0;
+    }
+
+}
+/* Sizes
+768 , 992 ,1200 */
+
+/* יש ליצור 3 כותרות
+במצב הכי קטן שרק כותרת אחת תופיע
+במצב האמצע שתי כותרות יופיעו
+במצב הכי גדול כל הכותרות יופיעו */
+    
+@media(max-width:768px){
+    body{
+        background-color: salmon;
+    }
+    h1{
+        display: none;
+    }
+}
+@media(min-width:1200px){
+    body{
+        background-color: cornflowerblue;
+    }
+}
+
+.item{
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    background-color: aquamarine;
+    font-size: xx-large;
+    margin: 5px;
+}
+
+#container{
+    height: 700px;
+    width: 900px;
+    background-color: bisque;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start; 
+    align-content: space-between;
+}
